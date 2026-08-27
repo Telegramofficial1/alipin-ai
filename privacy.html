@@ -1,1 +1,610 @@
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Privacy Policy | Alipin AI</title>
+
+    <meta name="description" content="Privacy Policy for Alipin AI, an AI-assisted product content and Pinterest publishing tool.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
+            background: #f7f9fc;
+            color: #172033;
+            line-height: 1.75;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid #e7eaf0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+        }
+
+        .nav {
+            max-width: 1100px;
+            width: 92%;
+            margin: auto;
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .brand-icon {
+            width: 39px;
+            height: 39px;
+            border-radius: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+            font-weight: 800;
+            box-shadow: 0 7px 18px rgba(79, 70, 229, 0.22);
+        }
+
+        .brand-name {
+            color: #111827;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .home-link {
+            text-decoration: none;
+            color: #4f46e5;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background:
+                radial-gradient(circle at 15% 20%, rgba(59, 130, 246, 0.17), transparent 30%),
+                radial-gradient(circle at 85% 30%, rgba(124, 58, 237, 0.17), transparent 30%),
+                linear-gradient(135deg, #0b1220, #151d35);
+            color: white;
+            padding: 75px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 52px);
+            letter-spacing: -1.5px;
+            margin-bottom: 14px;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            font-size: 15px;
+        }
+
+        /* =========================
+           CONTENT
+        ========================= */
+
+        .page {
+            max-width: 900px;
+            width: 92%;
+            margin: 55px auto 80px;
+        }
+
+        .notice {
+            background: #eef2ff;
+            border: 1px solid #dbe4ff;
+            border-radius: 13px;
+            padding: 20px 22px;
+            margin-bottom: 35px;
+            color: #334155;
+            font-size: 14px;
+        }
+
+        .policy {
+            background: white;
+            border: 1px solid #e5e9f0;
+            border-radius: 16px;
+            padding: 45px;
+            box-shadow: 0 12px 35px rgba(15, 23, 42, 0.05);
+        }
+
+        .policy h2 {
+            font-size: 22px;
+            color: #111827;
+            margin-top: 34px;
+            margin-bottom: 12px;
+        }
+
+        .policy h2:first-child {
+            margin-top: 0;
+        }
+
+        .policy h3 {
+            font-size: 17px;
+            color: #1f2937;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        .policy p {
+            color: #596579;
+            font-size: 14px;
+            margin-bottom: 13px;
+        }
+
+        .policy ul {
+            margin: 10px 0 18px 22px;
+            color: #596579;
+            font-size: 14px;
+        }
+
+        .policy li {
+            margin-bottom: 7px;
+        }
+
+        .policy a {
+            color: #4f46e5;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .policy a:hover {
+            text-decoration: underline;
+        }
+
+        .updated {
+            margin-top: 35px;
+            padding-top: 22px;
+            border-top: 1px solid #e5e7eb;
+            color: #7b8494;
+            font-size: 13px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0b1220;
+            color: #94a3b8;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 650px) {
+
+            .nav {
+                min-height: 65px;
+            }
+
+            .policy {
+                padding: 28px 22px;
+            }
+
+            .hero {
+                padding: 60px 20px;
+            }
+
+            .page {
+                margin-top: 35px;
+            }
+
+            .policy h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="nav">
+
+        <a href="index.html" class="brand">
+            <div class="brand-icon">A</div>
+            <div class="brand-name">Alipin AI</div>
+        </a>
+
+        <a href="index.html" class="home-link">
+            ← Back to Home
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <h1>Privacy Policy</h1>
+
+    <p>
+        Your privacy and the responsible handling of information are important
+        to Alipin AI.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     POLICY CONTENT
+========================= -->
+
+<main class="page">
+
+    <div class="notice">
+
+        <strong>Important:</strong>
+        This Privacy Policy explains how Alipin AI may collect, use and
+        protect information when you use our application and related services.
+
+    </div>
+
+
+    <article class="policy">
+
+        <!-- 1 -->
+
+        <h2>1. Introduction</h2>
+
+        <p>
+            Alipin AI ("Alipin AI", "we", "us", or "our") is an AI-assisted
+            content automation tool designed to help users discover mobile
+            accessories, prepare product information, generate content, and
+            manage Pinterest publishing workflows.
+        </p>
+
+        <p>
+            By using Alipin AI, you acknowledge that you have read and
+            understood this Privacy Policy.
+        </p>
+
+
+        <!-- 2 -->
+
+        <h2>2. Information We May Collect</h2>
+
+        <p>
+            Depending on how you use Alipin AI, the application may process
+            limited information necessary to provide its functionality.
+        </p>
+
+        <h3>Information provided by you</h3>
+
+        <ul>
+            <li>Name or basic account information, if provided.</li>
+            <li>Email address when you contact us.</li>
+            <li>Product URLs or product information you choose to process.</li>
+            <li>Content or instructions you provide to AI-assisted features.</li>
+        </ul>
+
+        <h3>Pinterest account information</h3>
+
+        <p>
+            If you connect a Pinterest account through an authorized
+            integration, Alipin AI may receive information and permissions
+            provided through Pinterest's authorization process.
+        </p>
+
+        <p>
+            We only use Pinterest-related information for the functionality
+            that you authorize, such as preparing or publishing content to
+            your Pinterest account.
+        </p>
+
+
+        <!-- 3 -->
+
+        <h2>3. How We Use Information</h2>
+
+        <p>
+            Information processed by Alipin AI may be used for the following
+            purposes:
+        </p>
+
+        <ul>
+            <li>Providing and operating the application's features.</li>
+            <li>Finding and organizing relevant product information.</li>
+            <li>Generating AI-assisted titles, descriptions and keywords.</li>
+            <li>Preparing content for Pinterest publishing.</li>
+            <li>Publishing content when you have authorized the application.</li>
+            <li>Responding to support and privacy-related requests.</li>
+            <li>Improving the reliability and functionality of the service.</li>
+            <li>Preventing misuse, fraud or unauthorized activity.</li>
+        </ul>
+
+
+        <!-- 4 -->
+
+        <h2>4. Pinterest Integration</h2>
+
+        <p>
+            Alipin AI may use Pinterest's APIs and authorized integrations to
+            provide Pinterest-related functionality.
+        </p>
+
+        <p>
+            When you connect your Pinterest account, you authorize Alipin AI
+            to access only the permissions requested during the authorization
+            process.
+        </p>
+
+        <p>
+            Pinterest account information is used only for providing the
+            functionality you have authorized. We do not sell Pinterest
+            account information or use it for unrelated purposes.
+        </p>
+
+        <p>
+            Your use of Pinterest is also subject to Pinterest's own terms,
+            policies and privacy practices.
+        </p>
+
+
+        <!-- 5 -->
+
+        <h2>5. Product Information and Affiliate Links</h2>
+
+        <p>
+            Alipin AI may process publicly available product information,
+            including product names, descriptions, prices, images and product
+            URLs, when such information is used for content creation.
+        </p>
+
+        <p>
+            Some product links generated or published through the service may
+            contain affiliate tracking parameters. If you make a purchase
+            through an affiliate link, the applicable merchant or affiliate
+            program may receive information according to its own privacy
+            policy and terms.
+        </p>
+
+        <p>
+            Alipin AI does not process or store your payment card information
+            for purchases made through third-party merchants.
+        </p>
+
+
+        <!-- 6 -->
+
+        <h2>6. AI-Assisted Content Generation</h2>
+
+        <p>
+            Alipin AI may use third-party artificial intelligence services to
+            assist with generating titles, descriptions, keywords and other
+            content.
+        </p>
+
+        <p>
+            Information submitted to AI-assisted features may be processed by
+            the relevant service provider according to its applicable terms
+            and privacy policies.
+        </p>
+
+        <p>
+            Users should avoid submitting sensitive personal information that
+            is not necessary for the requested content-generation task.
+        </p>
+
+
+        <!-- 7 -->
+
+        <h2>7. Third-Party Services</h2>
+
+        <p>
+            Alipin AI may interact with third-party platforms and services,
+            including Pinterest, product/affiliate platforms and AI service
+            providers.
+        </p>
+
+        <p>
+            These third parties operate independently and may have their own
+            privacy policies, terms and data-handling practices. We encourage
+            users to review the privacy policies of any third-party service
+            they use through Alipin AI.
+        </p>
+
+
+        <!-- 8 -->
+
+        <h2>8. Data Storage and Security</h2>
+
+        <p>
+            We take reasonable technical and organizational measures to
+            protect information processed through Alipin AI.
+        </p>
+
+        <p>
+            However, no method of electronic transmission or storage is
+            completely secure. Therefore, we cannot guarantee absolute
+            security of information.
+        </p>
+
+
+        <!-- 9 -->
+
+        <h2>9. Data Retention</h2>
+
+        <p>
+            We retain information only for as long as reasonably necessary to
+            provide the service, maintain security, comply with applicable
+            legal obligations, resolve disputes, and enforce our agreements.
+        </p>
+
+        <p>
+            When information is no longer required, we may delete or
+            anonymize it where reasonably practicable.
+        </p>
+
+
+        <!-- 10 -->
+
+        <h2>10. Your Choices and Rights</h2>
+
+        <p>
+            Depending on applicable law, you may have rights regarding your
+            personal information, including the right to request access,
+            correction or deletion of certain information.
+        </p>
+
+        <p>
+            You may also stop using Alipin AI or revoke the application's
+            access to your Pinterest account through the relevant Pinterest
+            account settings.
+        </p>
+
+
+        <!-- 11 -->
+
+        <h2>11. Data Deletion Requests</h2>
+
+        <p>
+            If you would like to request deletion of information associated
+            with your use of Alipin AI, contact us using the email address
+            below.
+        </p>
+
+        <p>
+            Please include enough information for us to identify your request.
+            We may need to verify the request before processing it.
+        </p>
+
+
+        <!-- 12 -->
+
+        <h2>12. Children's Privacy</h2>
+
+        <p>
+            Alipin AI is not intended for children under the age of 13.
+            We do not knowingly collect personal information from children
+            under 13.
+        </p>
+
+        <p>
+            If you believe that a child has provided personal information to
+            us, please contact us so that appropriate action can be taken.
+        </p>
+
+
+        <!-- 13 -->
+
+        <h2>13. Changes to This Privacy Policy</h2>
+
+        <p>
+            We may update this Privacy Policy from time to time to reflect
+            changes to our services, technology, legal requirements or
+            business practices.
+        </p>
+
+        <p>
+            When changes are made, the updated policy will be published on
+            this page with a revised effective date.
+        </p>
+
+
+        <!-- 14 -->
+
+        <h2>14. Contact Us</h2>
+
+        <p>
+            If you have questions about this Privacy Policy, data practices,
+            or a data deletion request, please contact:
+        </p>
+
+        <p>
+            <strong>Email:</strong>
+            <a href="mailto:Telegramidconfig@gmail.com">
+                Telegramidconfig@gmail.com
+            </a>
+        </p>
+
+
+        <div class="updated">
+            <strong>Last Updated:</strong> August 27, 2026
+        </div>
+
+    </article>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026 Alipin AI. All rights reserved.
+    </p>
+
+    <p>
+        <a href="index.html">Home</a>
+        &nbsp; • &nbsp;
+        <a href="privacy.html">Privacy Policy</a>
+    </p>
+
+</footer>
+
+</body>
+</html>
+```
