@@ -1,1 +1,344 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Alipin AI - Pinterest Content Automation</title>
+
+    <meta name="description" content="Alipin AI helps users discover mobile accessories, generate Pinterest content with AI, and manage Pinterest publishing workflows.">
+    <meta name="robots" content="index, follow">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f8f9fb;
+        }
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #111827;
+        }
+
+        nav a {
+            color: #374151;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 90px 20px;
+            background: #ffffff;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            margin-bottom: 20px;
+            color: #111827;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 19px;
+            color: #6b7280;
+        }
+
+        .section {
+            padding: 70px 20px;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #111827;
+        }
+
+        .section-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #6b7280;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .card p {
+            color: #6b7280;
+        }
+
+        .steps {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .step {
+            background: #ffffff;
+            padding: 24px;
+            margin-bottom: 15px;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+        }
+
+        .step strong {
+            color: #111827;
+        }
+
+        .contact {
+            text-align: center;
+            background: #ffffff;
+        }
+
+        .contact a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #111827;
+            color: #d1d5db;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">Alipin AI</div>
+
+            <div>
+                <a href="#about">About</a>
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>Alipin AI</h1>
+
+        <p>
+            An AI-powered content automation tool designed to help users
+            discover mobile accessories, create engaging Pinterest content,
+            and manage their publishing workflow more efficiently.
+        </p>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <div class="container">
+        <h2>About Alipin AI</h2>
+
+        <p class="section-intro">
+            Alipin AI is a content automation project that combines product
+            research and AI-assisted content creation to simplify the process
+            of preparing product content for Pinterest.
+        </p>
+    </div>
+</section>
+
+<section id="features" class="section">
+    <div class="container">
+        <h2>Features</h2>
+
+        <p class="section-intro">
+            Alipin AI is designed to streamline several parts of the
+            product-content publishing workflow.
+        </p>
+
+        <div class="features">
+
+            <div class="card">
+                <h3>Product Discovery</h3>
+                <p>
+                    Helps users find relevant mobile accessories and collect
+                    useful product information for content creation.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>AI Content Creation</h3>
+                <p>
+                    Assists with creating product titles, descriptions and
+                    keyword-focused content suitable for Pinterest.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Pinterest Publishing</h3>
+                <p>
+                    Designed to help users organize and publish product
+                    content to their authorized Pinterest account.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="how-it-works" class="section">
+    <div class="container">
+
+        <h2>How It Works</h2>
+
+        <p class="section-intro">
+            The planned workflow is designed to make product-content
+            publishing simpler and more efficient.
+        </p>
+
+        <div class="steps">
+
+            <div class="step">
+                <strong>1. Discover Products</strong>
+                <p>
+                    Find relevant mobile accessories and collect available
+                    product information.
+                </p>
+            </div>
+
+            <div class="step">
+                <strong>2. Generate Content</strong>
+                <p>
+                    Use AI-assisted tools to create titles, descriptions and
+                    relevant keywords.
+                </p>
+            </div>
+
+            <div class="step">
+                <strong>3. Prepare Pinterest Content</strong>
+                <p>
+                    Organize product information and prepare content for
+                    Pinterest publishing.
+                </p>
+            </div>
+
+            <div class="step">
+                <strong>4. Publish</strong>
+                <p>
+                    Publish content to a Pinterest account after the user has
+                    authorized the application.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section contact">
+    <div class="container">
+
+        <h2>Contact</h2>
+
+        <p class="section-intro">
+            For questions, support or privacy-related requests, please
+            contact us by email.
+        </p>
+
+        <!-- Replace this email with your real email address -->
+        <p>
+            Email:
+            <a href="mailto:YOUR-EMAIL@example.com">
+                YOUR-EMAIL@example.com
+            </a>
+        </p>
+
+    </div>
+</section>
+
+<footer>
+    <p>
+        © 2026 Alipin AI. All rights reserved.
+    </p>
+
+    <p>
+        <a href="privacy.html">Privacy Policy</a>
+    </p>
+</footer>
+
+</body>
+</html>
+```
