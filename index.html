@@ -5,176 +5,545 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Alipin AI - Pinterest Content Automation</title>
+    <title>Alipin AI | Smart Pinterest Content Automation</title>
 
-    <meta name="description" content="Alipin AI helps users discover mobile accessories, generate Pinterest content with AI, and manage Pinterest publishing workflows.">
+    <meta name="description" content="Alipin AI helps users discover mobile accessories, generate AI-powered Pinterest content, and streamline their content publishing workflow.">
+
     <meta name="robots" content="index, follow">
 
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
+            background: #f7f9fc;
+            color: #172033;
             line-height: 1.6;
-            color: #222;
-            background: #f8f9fb;
         }
+
+        /* =========================
+           NAVBAR
+        ========================= */
 
         header {
-            background: #ffffff;
-            border-bottom: 1px solid #e5e7eb;
-            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid #e8ebf2;
         }
 
-        .container {
-            width: 90%;
-            max-width: 1100px;
+        .nav-container {
+            max-width: 1180px;
+            width: 92%;
             margin: auto;
-        }
-
-        nav {
+            height: 74px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
         }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            text-decoration: none;
+        }
+
+        .brand-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 19px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
+        }
+
+        .brand-name {
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
             color: #111827;
         }
 
-        nav a {
-            color: #374151;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 15px;
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        .nav-links a {
+            text-decoration: none;
+            color: #5b6475;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.2s;
         }
+
+        .nav-links a:hover {
+            color: #4f46e5;
+        }
+
+        .nav-button {
+            padding: 10px 17px;
+            border-radius: 9px;
+            color: white !important;
+            background: #111827;
+        }
+
+        .nav-button:hover {
+            background: #273449;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(59, 130, 246, 0.18), transparent 30%),
+                radial-gradient(circle at 85% 30%, rgba(124, 58, 237, 0.18), transparent 30%),
+                linear-gradient(135deg, #0b1220 0%, #111b33 50%, #15112d 100%);
+            color: white;
+            padding: 110px 20px 120px;
+        }
+
+        .hero-content {
+            max-width: 920px;
+            margin: auto;
             text-align: center;
-            padding: 90px 20px;
-            background: #ffffff;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border: 1px solid rgba(255,255,255,0.14);
+            background: rgba(255,255,255,0.07);
+            border-radius: 999px;
+            font-size: 13px;
+            color: #dbeafe;
+            margin-bottom: 25px;
+        }
+
+        .badge-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #60a5fa;
         }
 
         .hero h1 {
-            font-size: 46px;
-            margin-bottom: 20px;
+            font-size: clamp(42px, 6vw, 70px);
+            line-height: 1.08;
+            letter-spacing: -2.5px;
+            margin-bottom: 25px;
+            font-weight: 850;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-description {
+            max-width: 720px;
+            margin: auto;
+            color: #c4cede;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 13px;
+            flex-wrap: wrap;
+        }
+
+        .primary-button,
+        .secondary-button {
+            display: inline-block;
+            text-decoration: none;
+            padding: 13px 22px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.25s;
+        }
+
+        .primary-button {
+            background: white;
             color: #111827;
         }
 
-        .hero p {
-            max-width: 700px;
-            margin: auto;
-            font-size: 19px;
-            color: #6b7280;
+        .primary-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
         }
+
+        .secondary-button {
+            border: 1px solid rgba(255,255,255,0.18);
+            background: rgba(255,255,255,0.06);
+            color: white;
+        }
+
+        .secondary-button:hover {
+            background: rgba(255,255,255,0.12);
+        }
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
 
         .section {
-            padding: 70px 20px;
+            padding: 90px 20px;
         }
 
-        .section h2 {
+        .container {
+            max-width: 1100px;
+            width: 92%;
+            margin: auto;
+        }
+
+        .section-heading {
             text-align: center;
-            font-size: 32px;
-            margin-bottom: 20px;
+            max-width: 720px;
+            margin: 0 auto 50px;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: #4f46e5;
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2 {
+            font-size: 38px;
+            line-height: 1.2;
+            letter-spacing: -1px;
             color: #111827;
+            margin-bottom: 15px;
         }
 
-        .section-intro {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            color: #6b7280;
+        .section-heading p {
+            color: #697386;
+            font-size: 16px;
         }
+
+        /* =========================
+           FEATURES
+        ========================= */
 
         .features {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 22px;
         }
 
-        .card {
-            background: #ffffff;
+        .feature-card {
+            background: white;
+            border: 1px solid #e7eaf0;
+            border-radius: 16px;
             padding: 30px;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
+            transition: 0.25s;
+            box-shadow: 0 8px 25px rgba(20, 30, 50, 0.04);
         }
 
-        .card h3 {
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 40px rgba(20, 30, 50, 0.09);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 21px;
+            margin-bottom: 20px;
+            color: white;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+        }
+
+        .feature-card h3 {
+            font-size: 19px;
             margin-bottom: 10px;
             color: #111827;
         }
 
-        .card p {
-            color: #6b7280;
-        }
-
-        .steps {
-            max-width: 800px;
-            margin: auto;
-        }
-
-        .step {
-            background: #ffffff;
-            padding: 24px;
-            margin-bottom: 15px;
-            border: 1px solid #e5e7eb;
-            border-radius: 10px;
-        }
-
-        .step strong {
-            color: #111827;
-        }
-
-        .contact {
-            text-align: center;
-            background: #ffffff;
-        }
-
-        .contact a {
-            color: #2563eb;
-            text-decoration: none;
-        }
-
-        footer {
-            background: #111827;
-            color: #d1d5db;
-            text-align: center;
-            padding: 25px 20px;
+        .feature-card p {
+            color: #697386;
             font-size: 14px;
         }
 
-        footer a {
-            color: #ffffff;
-            text-decoration: none;
-            margin: 0 8px;
+        /* =========================
+           HOW IT WORKS
+        ========================= */
+
+        .workflow {
+            background: #eef2f8;
         }
 
-        @media (max-width: 768px) {
+        .steps {
+            max-width: 850px;
+            margin: auto;
+            display: grid;
+            gap: 16px;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            background: white;
+            border: 1px solid #e3e7ef;
+            border-radius: 14px;
+            padding: 23px;
+        }
+
+        .step-number {
+            min-width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eef2ff;
+            color: #4f46e5;
+            font-weight: 800;
+        }
+
+        .step h3 {
+            font-size: 17px;
+            color: #111827;
+            margin-bottom: 5px;
+        }
+
+        .step p {
+            font-size: 14px;
+            color: #697386;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-size: 38px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 18px;
+            color: #111827;
+        }
+
+        .about-content p {
+            color: #697386;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .about-panel {
+            border-radius: 20px;
+            padding: 35px;
+            background: linear-gradient(135deg, #111827, #1e293b);
+            color: white;
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.15);
+        }
+
+        .about-panel h3 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .about-panel p {
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: white;
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .contact-box h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+            color: #111827;
+        }
+
+        .contact-box p {
+            color: #697386;
+            margin-bottom: 20px;
+        }
+
+        .email {
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 700;
+            color: #4f46e5;
+            background: #eef2ff;
+            padding: 12px 18px;
+            border-radius: 9px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0b1220;
+            color: #94a3b8;
+            padding: 35px 20px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            width: 92%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-brand {
+            font-weight: 800;
+            color: white;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                gap: 14px;
+            }
+
             .features {
                 grid-template-columns: 1fr;
             }
 
-            .hero h1 {
-                font-size: 36px;
+            .about-box {
+                grid-template-columns: 1fr;
             }
 
-            nav {
+            .hero {
+                padding: 85px 20px 95px;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .nav-container {
+                height: auto;
+                padding: 15px 0;
                 flex-direction: column;
-                gap: 10px;
+                gap: 14px;
             }
 
-            nav a {
-                margin: 0 8px;
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .nav-button {
+                display: none;
+            }
+
+            .hero h1 {
+                letter-spacing: -1.5px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 70px 15px;
+            }
+
+            .section-heading h2,
+            .about-content h2,
+            .contact-box h2 {
+                font-size: 30px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .step {
+                padding: 20px;
             }
         }
     </style>
@@ -182,161 +551,342 @@
 
 <body>
 
-<header>
-    <div class="container">
-        <nav>
-            <div class="logo">Alipin AI</div>
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-            <div>
-                <a href="#about">About</a>
-                <a href="#features">Features</a>
-                <a href="#how-it-works">How It Works</a>
-                <a href="privacy.html">Privacy Policy</a>
-            </div>
+<header>
+    <div class="nav-container">
+
+        <a href="#" class="brand">
+            <div class="brand-icon">A</div>
+            <div class="brand-name">Alipin AI</div>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#workflow">How It Works</a>
+            <a href="privacy.html" class="nav-button">Privacy Policy</a>
         </nav>
+
     </div>
 </header>
 
-<section class="hero">
-    <div class="container">
-        <h1>Alipin AI</h1>
 
-        <p>
-            An AI-powered content automation tool designed to help users
-            discover mobile accessories, create engaging Pinterest content,
-            and manage their publishing workflow more efficiently.
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            <span class="badge-dot"></span>
+            AI-Powered Content Automation
+        </div>
+
+        <h1>
+            Smarter Product Content.<br>
+            <span class="gradient-text">Simpler Pinterest Publishing.</span>
+        </h1>
+
+        <p class="hero-description">
+            Alipin AI helps users discover mobile accessories, generate
+            engaging content with AI, and streamline their Pinterest
+            publishing workflow.
         </p>
+
+        <div class="hero-buttons">
+            <a href="#features" class="primary-button">
+                Explore Features
+            </a>
+
+            <a href="privacy.html" class="secondary-button">
+                Privacy Policy
+            </a>
+        </div>
+
     </div>
+
 </section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about" class="section">
+
     <div class="container">
-        <h2>About Alipin AI</h2>
 
-        <p class="section-intro">
-            Alipin AI is a content automation project that combines product
-            research and AI-assisted content creation to simplify the process
-            of preparing product content for Pinterest.
-        </p>
-    </div>
-</section>
+        <div class="about-box">
 
-<section id="features" class="section">
-    <div class="container">
-        <h2>Features</h2>
+            <div class="about-content">
 
-        <p class="section-intro">
-            Alipin AI is designed to streamline several parts of the
-            product-content publishing workflow.
-        </p>
+                <span class="section-label">About Alipin AI</span>
 
-        <div class="features">
+                <h2>
+                    Built to simplify your content workflow.
+                </h2>
 
-            <div class="card">
-                <h3>Product Discovery</h3>
                 <p>
-                    Helps users find relevant mobile accessories and collect
-                    useful product information for content creation.
+                    Alipin AI is an AI-assisted content automation project
+                    designed to simplify the process of researching mobile
+                    accessories and preparing product content for Pinterest.
                 </p>
+
+                <p>
+                    The platform is designed to help users save time by
+                    combining product discovery, AI-assisted content creation,
+                    and Pinterest publishing into a streamlined workflow.
+                </p>
+
             </div>
 
-            <div class="card">
-                <h3>AI Content Creation</h3>
-                <p>
-                    Assists with creating product titles, descriptions and
-                    keyword-focused content suitable for Pinterest.
-                </p>
-            </div>
+            <div class="about-panel">
 
-            <div class="card">
-                <h3>Pinterest Publishing</h3>
+                <h3>One streamlined workflow</h3>
+
                 <p>
-                    Designed to help users organize and publish product
-                    content to their authorized Pinterest account.
+                    Discover relevant products, prepare useful product
+                    information, generate optimized content, and organize
+                    Pinterest publishing through a single workflow.
                 </p>
+
             </div>
 
         </div>
+
     </div>
+
 </section>
 
-<section id="how-it-works" class="section">
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<section id="features" class="section">
+
     <div class="container">
 
-        <h2>How It Works</h2>
+        <div class="section-heading">
 
-        <p class="section-intro">
-            The planned workflow is designed to make product-content
-            publishing simpler and more efficient.
-        </p>
+            <span class="section-label">Features</span>
+
+            <h2>
+                Everything you need for better product content
+            </h2>
+
+            <p>
+                Alipin AI is designed to simplify the most time-consuming
+                parts of product content preparation.
+            </p>
+
+        </div>
+
+
+        <div class="features">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">🔎</div>
+
+                <h3>Product Discovery</h3>
+
+                <p>
+                    Find relevant mobile accessories and collect useful
+                    product information for content creation.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">✦</div>
+
+                <h3>AI Content Creation</h3>
+
+                <p>
+                    Generate helpful product titles, descriptions and
+                    keyword-focused Pinterest content with AI assistance.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">📌</div>
+
+                <h3>Pinterest Publishing</h3>
+
+                <p>
+                    Prepare and publish content to a Pinterest account after
+                    the user has authorized the application.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WORKFLOW
+========================= -->
+
+<section id="workflow" class="section workflow">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">How It Works</span>
+
+            <h2>
+                A simple four-step workflow
+            </h2>
+
+            <p>
+                Alipin AI is designed to make product-content publishing
+                easier and more organized.
+            </p>
+
+        </div>
+
 
         <div class="steps">
 
             <div class="step">
-                <strong>1. Discover Products</strong>
-                <p>
-                    Find relevant mobile accessories and collect available
-                    product information.
-                </p>
+
+                <div class="step-number">01</div>
+
+                <div>
+                    <h3>Discover Products</h3>
+
+                    <p>
+                        Find relevant mobile accessories and collect
+                        available product information.
+                    </p>
+                </div>
+
             </div>
 
-            <div class="step">
-                <strong>2. Generate Content</strong>
-                <p>
-                    Use AI-assisted tools to create titles, descriptions and
-                    relevant keywords.
-                </p>
-            </div>
 
             <div class="step">
-                <strong>3. Prepare Pinterest Content</strong>
-                <p>
-                    Organize product information and prepare content for
-                    Pinterest publishing.
-                </p>
+
+                <div class="step-number">02</div>
+
+                <div>
+                    <h3>Generate Content</h3>
+
+                    <p>
+                        Use AI-assisted tools to create titles, descriptions
+                        and relevant keywords.
+                    </p>
+                </div>
+
             </div>
 
+
             <div class="step">
-                <strong>4. Publish</strong>
-                <p>
-                    Publish content to a Pinterest account after the user has
-                    authorized the application.
-                </p>
+
+                <div class="step-number">03</div>
+
+                <div>
+                    <h3>Prepare Pinterest Content</h3>
+
+                    <p>
+                        Organize product information and prepare content
+                        suitable for Pinterest publishing.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">04</div>
+
+                <div>
+                    <h3>Publish</h3>
+
+                    <p>
+                        Publish content to an authorized Pinterest account
+                        using the appropriate publishing workflow.
+                    </p>
+                </div>
+
             </div>
 
         </div>
+
     </div>
+
 </section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section class="section contact">
-    <div class="container">
 
-        <h2>Contact</h2>
+    <div class="contact-box">
 
-        <p class="section-intro">
-            For questions, support or privacy-related requests, please
-            contact us by email.
-        </p>
+        <span class="section-label">Get In Touch</span>
 
-        <!-- Replace this email with your real email address -->
+        <h2>Have a question?</h2>
+
         <p>
-            Email:
-            <a href="mailto:YOUR-EMAIL@example.com">
-                YOUR-EMAIL@example.com
-            </a>
+            For support, privacy-related requests, or general questions
+            about Alipin AI, contact us by email.
         </p>
+
+        <!-- Replace this email if needed -->
+
+        <a class="email" href="mailto:Telegramidconfig@gmail.com">
+            Telegramidconfig@gmail.com
+        </a>
 
     </div>
+
 </section>
 
-<footer>
-    <p>
-        © 2026 Alipin AI. All rights reserved.
-    </p>
 
-    <p>
-        <a href="privacy.html">Privacy Policy</a>
-    </p>
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            Alipin AI
+        </div>
+
+        <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#workflow">How It Works</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Alipin AI. All rights reserved.
+    </div>
+
 </footer>
 
 </body>
